@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { LanguageToggle } from "@/components/LanguageToggle";
-import { Menu, X } from "lucide-react";
+import { Heart, Menu, X } from "lucide-react";
 
 interface NavigationProps {
   translations: any;
@@ -38,24 +38,20 @@ export const Navigation = ({ translations, currentLanguage, onLanguageChange, on
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-        : 'bg-gradient-to-r from-primary/20 to-secondary/20 backdrop-blur-sm'
+        : 'bg-white/10 backdrop-blur-sm'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <button 
             onClick={scrollToTop}
-            className="flex items-center space-x-3 group"
+            className="flex items-center space-x-2 group"
           >
-            <img 
-              src="/lovable-uploads/c987a49c-98b3-4041-abdc-d8dca86a0db1.png" 
-              alt="Manuel Global Atmissions Logo" 
-              className={`w-10 h-10 transition-all duration-300 ${
-                isScrolled ? 'brightness-75' : 'brightness-100 drop-shadow-lg'
-              }`}
-            />
+            <Heart className={`w-8 h-8 transition-colors ${
+              isScrolled ? 'text-primary' : 'text-white'
+            }`} />
             <span className={`text-xl font-bold transition-colors ${
-              isScrolled ? 'text-primary' : 'text-white drop-shadow-md'
+              isScrolled ? 'text-primary' : 'text-white'
             }`}>
               Manuel Global Atmissions
             </span>
