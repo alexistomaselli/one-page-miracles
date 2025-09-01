@@ -48,7 +48,7 @@ export const Navigation = ({ translations, currentLanguage, onLanguageChange, on
             className="flex items-center space-x-2 group"
           >
             <img 
-              src="/lovable-uploads/76f9b7a9-59e0-4101-b613-fda086a30b46.png" 
+              src="/lovable-uploads/6166bf8b-832a-4b45-8578-f751b80c840b.png" 
               alt="Manuel Global Atmissions Logo" 
               className="w-16 h-16 object-contain"
             />
