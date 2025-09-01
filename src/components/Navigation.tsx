@@ -41,7 +41,7 @@ export const Navigation = ({ translations, currentLanguage, onLanguageChange, on
         : 'bg-white/10 backdrop-blur-sm'
     }`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <button 
             onClick={scrollToTop}
@@ -50,7 +50,7 @@ export const Navigation = ({ translations, currentLanguage, onLanguageChange, on
             <img 
               src="/lovable-uploads/76f9b7a9-59e0-4101-b613-fda086a30b46.png" 
               alt="Manuel Global Atmissions Logo" 
-              className="w-10 h-10 object-contain"
+              className="w-16 h-16 object-contain"
             />
             <span className={`text-xl font-bold transition-colors ${
               isScrolled ? 'text-primary' : 'text-white'
