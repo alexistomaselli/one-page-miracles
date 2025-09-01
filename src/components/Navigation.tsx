@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { LanguageToggle } from "@/components/LanguageToggle";
-import { Heart, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 interface NavigationProps {
   translations: any;
@@ -47,9 +47,11 @@ export const Navigation = ({ translations, currentLanguage, onLanguageChange, on
             onClick={scrollToTop}
             className="flex items-center space-x-2 group"
           >
-            <Heart className={`w-8 h-8 transition-colors ${
-              isScrolled ? 'text-primary' : 'text-white'
-            }`} />
+            <img 
+              src="/lovable-uploads/76f9b7a9-59e0-4101-b613-fda086a30b46.png" 
+              alt="Manuel Global Atmissions Logo" 
+              className="w-10 h-10 object-contain"
+            />
             <span className={`text-xl font-bold transition-colors ${
               isScrolled ? 'text-primary' : 'text-white'
             }`}>
