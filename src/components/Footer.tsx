@@ -96,7 +96,7 @@ export const Footer = ({ translations, currentLanguage, onLanguageChange, onDona
         
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 mb-4 md:mb-0">
-            © 2024 Manuel Global Atmissions. {translations.footer.rights}
+            © 2025 Manuel Global Atmissions. {translations.footer.rights}
           </p>
           <LanguageToggle 
             currentLanguage={currentLanguage}

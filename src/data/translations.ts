@@ -10,15 +10,15 @@ export const translations = {
     
     // Hero section
     hero: {
-      title: "Una sola página, tres milagros por cumplir",
-      subtitle: "Juntos podemos transformar vidas a través de la educación, el cuidado y la alimentación. Tu donación hace la diferencia.",
+      title: "Brindando Alivio y Esperanza en América Latina en el Nombre de Jesús",
+      subtitle: "Proporcionamos alivio esencial y recursos a comunidades necesitadas en países latinos. Juntos transformamos vidas y fomentamos un futuro más brillante siguiendo el mandato de nuestro Padre.",
       cta: "Donar Ahora"
     },
     
     // Mission section
     mission: {
       title: "Nuestra Misión",
-      content: "En Manuel Global Atmissions creemos que cada vida tiene un propósito divino. Trabajamos con fe y amor para brindar esperanza, educación y sustento a quienes más lo necesitan. Nuestro compromiso es ser las manos y los pies de Cristo en este mundo.",
+      content: "En Emmanuel Global Latin Missions, nuestro objetivo es ser la fundación líder en países latinos abordando desafíos esenciales que enfrentan las comunidades. A través de nuestros programas, buscamos crear un impacto profundo apoyando la educación, fomentando el crecimiento espiritual y facilitando la independencia económica. Unidos por un propósito común, te invitamos a unirte a nosotros en este viaje de transformación.",
       verse: '"Y el Rey les dirá: De cierto os digo que en cuanto lo hicisteis a uno de estos mis hermanos más pequeños, a mí lo hicisteis." - Mateo 25:40'
     },
     
@@ -94,16 +94,16 @@ export const translations = {
     },
     
     // Hero section
-    hero: {
-      title: "One page, three miracles to fulfill",
-      subtitle: "Together we can transform lives through education, care, and nourishment. Your donation makes the difference.",
-      cta: "Donate Now"
-    },
+  hero: {
+    title: "Providing Relief & Hope Across Latin America in Jesus' Name",
+    subtitle: "We provide essential relief and resources to communities in need across Latin countries. Together we transform lives and foster a brighter future following our Father's mandate.",
+    cta: "Donate Now"
+  },
     
     // Mission section
     mission: {
       title: "Our Mission",
-      content: "At Manuel Global Atmissions we believe that every life has a divine purpose. We work with faith and love to bring hope, education, and sustenance to those who need it most. Our commitment is to be the hands and feet of Christ in this world.",
+      content: "At Emmanuel Global Latin Missions, our goal is to be the leading foundation in Latin countries addressing essential challenges faced by communities. Through our programs, we aim to create a profound impact by supporting education, fostering spiritual growth, and enabling economic independence. United by a common purpose, we invite you to join us in this journey of transformation.",
       verse: '"And the King will say to them: Truly I say to you, as you did it to one of the least of these my brothers, you did it to me." - Matthew 25:40'
     },
     

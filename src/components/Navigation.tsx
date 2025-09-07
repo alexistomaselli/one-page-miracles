@@ -8,9 +8,10 @@ interface NavigationProps {
   currentLanguage: string;
   onLanguageChange: (language: string) => void;
   onDonate: () => void;
+  logoUrl?: string;
 }
 
-export const Navigation = ({ translations, currentLanguage, onLanguageChange, onDonate }: NavigationProps) => {
+export const Navigation = ({ translations, currentLanguage, onLanguageChange, onDonate, logoUrl }: NavigationProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -47,10 +48,19 @@ export const Navigation = ({ translations, currentLanguage, onLanguageChange, on
             onClick={scrollToTop}
             className="flex items-center space-x-2 group"
           >
+            {/* Intentar cargar el logo desde diferentes fuentes */}
             <img 
-              src="/lovable-uploads/6166bf8b-832a-4b45-8578-f751b80c840b.png" 
+              src={logoUrl || (window as any).EmmanuelBridge?.getImage('logo') || "/lovable-uploads/6166bf8b-832a-4b45-8578-f751b80c840b.png"} 
               alt="Manuel Global Atmissions Logo" 
               className="w-16 h-16 object-contain"
+              onError={(e) => {
+                console.error('Error loading logo:', e);
+                // Si hay un error al cargar la imagen, intentar con la URL de respaldo
+                const imgElement = e.target as HTMLImageElement;
+                if (imgElement.src !== "/lovable-uploads/6166bf8b-832a-4b45-8578-f751b80c840b.png") {
+                  imgElement.src = "/lovable-uploads/6166bf8b-832a-4b45-8578-f751b80c840b.png";
+                }
+              }}
             />
             <span className={`text-xl font-bold transition-colors ${
               isScrolled ? 'text-primary' : 'text-white'

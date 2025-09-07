@@ -8,6 +8,15 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    cors: true,
+    origin: "http://localhost:8080",
+    hmr: {
+      host: "localhost",
+    },
+    // Permitir acceso desde WordPress
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
   },
   plugins: [
     react(),
@@ -18,5 +27,11 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  // Configuración para desarrollo
+  build: {
+    sourcemap: true,
+    // Desactivar minificación en desarrollo
+    minify: mode === 'production',
   },
 }));
