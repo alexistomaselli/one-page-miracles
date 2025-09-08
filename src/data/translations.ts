@@ -8,11 +8,18 @@ export const translations = {
       donate: "Donar"
     },
     
+    // Donate dialog
+    donate: {
+      title: "Haz tu donación",
+      subtitle: "Tu generosidad transforma vidas",
+      direct: "Donar Directo"
+    },
+    
     // Hero section
     hero: {
       title: "Brindando Alivio y Esperanza en América Latina en el Nombre de Jesús",
       subtitle: "Proporcionamos alivio esencial y recursos a comunidades necesitadas en países latinos. Juntos transformamos vidas y fomentamos un futuro más brillante siguiendo el mandato de nuestro Padre.",
-      cta: "Donar Ahora"
+      cta: "Ver Proyectos"
     },
     
     // Mission section
@@ -93,11 +100,18 @@ export const translations = {
       donate: "Donate"
     },
     
+    // Donate dialog
+    donate: {
+      title: "Make your donation",
+      subtitle: "Your generosity transforms lives",
+      direct: "Donate Direct"
+    },
+    
     // Hero section
   hero: {
     title: "Providing Relief & Hope Across Latin America in Jesus' Name",
     subtitle: "We provide essential relief and resources to communities in need across Latin countries. Together we transform lives and foster a brighter future following our Father's mandate.",
-    cta: "Donate Now"
+    cta: "View Projects"
   },
     
     // Mission section

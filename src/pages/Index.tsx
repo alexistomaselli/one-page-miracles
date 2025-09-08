@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Mission } from "@/components/Mission";
@@ -7,17 +7,26 @@ import { Testimonial } from "@/components/Testimonial";
 import { CallToAction } from "@/components/CallToAction";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { PayPalDonateButton } from "@/components/PayPalDonateButton";
 import { translations } from "@/data/translations";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 const Index = () => {
   const [currentLanguage, setCurrentLanguage] = useState("es");
+  const [isDonateDialogOpen, setIsDonateDialogOpen] = useState(false);
   
   const t = translations[currentLanguage as keyof typeof translations];
 
+  const projectsRef = useRef<HTMLDivElement>(null);
+
   const handleDonate = () => {
-    // Simulate PayPal donation - in a real implementation, this would redirect to PayPal
-    const paypalUrl = "https://www.paypal.com/donate/?hosted_button_id=YOUR_PAYPAL_BUTTON_ID";
-    window.open(paypalUrl, '_blank');
+    // Navegar a la sección de proyectos
+    projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleDirectDonate = () => {
+    // Redirigir directamente a la URL de PayPal
+    window.open('https://www.paypal.com/donate/?hosted_button_id=NGY3MHW5XNTPJ', '_blank');
   };
 
   const handleLanguageChange = (language: string) => {
@@ -30,22 +39,41 @@ const Index = () => {
         translations={t}
         currentLanguage={currentLanguage}
         onLanguageChange={handleLanguageChange}
-        onDonate={handleDonate}
+        onDonate={handleDirectDonate}
       />
       
       <Hero 
         translations={t}
         onDonate={handleDonate}
+        onDirectDonate={handleDirectDonate}
       />
       
       <Mission 
         translations={t}
       />
       
-      <Projects 
-        translations={t}
-        onDonate={handleDonate}
-      />
+      <div ref={projectsRef}>
+        <Projects 
+          translations={t}
+          onDonate={() => setIsDonateDialogOpen(true)}
+        />
+      </div>
+      
+      {/* Diálogo de donación con PayPal */}
+      <Dialog open={isDonateDialogOpen} onOpenChange={setIsDonateDialogOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-center text-primary">{t.donate.title}</DialogTitle>
+            <p className="text-center text-gray-600 mt-2">{t.donate.subtitle}</p>
+          </DialogHeader>
+          <div className="flex flex-col items-center justify-center py-6">
+            <PayPalDonateButton 
+              hostedButtonId="Y36EWLZRDUE42" 
+              containerId="paypal-container-Y36EWLZRDUE42" 
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
       
       <Testimonial 
         translations={t}
@@ -53,7 +81,7 @@ const Index = () => {
       
       <CallToAction 
         translations={t}
-        onDonate={handleDonate}
+        onDonate={handleDirectDonate}
       />
       
       <Contact 
@@ -64,7 +92,7 @@ const Index = () => {
         translations={t}
         currentLanguage={currentLanguage}
         onLanguageChange={handleLanguageChange}
-        onDonate={handleDonate}
+        onDonate={handleDirectDonate}
       />
     </div>
   );

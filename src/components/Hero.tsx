@@ -4,9 +4,10 @@ import heroImage from "@/assets/hero-divine-light.jpg";
 interface HeroProps {
   translations: any;
   onDonate: () => void;
+  onDirectDonate?: () => void;
 }
 
-export const Hero = ({ translations, onDonate }: HeroProps) => {
+export const Hero = ({ translations, onDonate, onDirectDonate }: HeroProps) => {
   return (
     <section 
       className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
@@ -24,14 +25,27 @@ export const Hero = ({ translations, onDonate }: HeroProps) => {
           <p className="text-sm md:text-base lg:text-lg mb-8 opacity-90 max-w-2xl mx-auto leading-relaxed">
             {translations.hero.subtitle}
           </p>
-          <Button 
-            variant="hero" 
-            size="lg" 
-            onClick={onDonate}
-            className="text-xl px-12 py-6 h-auto"
-          >
-            {translations.hero.cta}
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {onDirectDonate && (
+              <Button 
+                variant="hero" 
+                size="lg" 
+                onClick={onDirectDonate}
+                className="text-xl px-12 py-6 h-auto"
+              >
+                {translations.donate.direct}
+              </Button>
+            )}
+            
+            <Button 
+              variant="outline" 
+              size="lg" 
+              onClick={onDonate}
+              className="text-xl px-12 py-6 h-auto bg-white/20 hover:bg-white/30 border-white text-white"
+            >
+              {translations.hero.cta}
+            </Button>
+          </div>
         </div>
       </div>
       
