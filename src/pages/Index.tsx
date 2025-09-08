@@ -18,6 +18,7 @@ const Index = () => {
   const t = translations[currentLanguage as keyof typeof translations];
 
   const projectsRef = useRef<HTMLDivElement>(null);
+  const missionRef = useRef<HTMLDivElement>(null);
 
   const handleDonate = () => {
     // Navegar a la sección de proyectos
@@ -46,11 +47,14 @@ const Index = () => {
         translations={t}
         onDonate={handleDonate}
         onDirectDonate={handleDirectDonate}
+        onScrollDown={() => missionRef.current?.scrollIntoView({ behavior: 'smooth' })}
       />
       
-      <Mission 
-        translations={t}
-      />
+      <div ref={missionRef}>
+        <Mission 
+          translations={t}
+        />
+      </div>
       
       <div ref={projectsRef}>
         <Projects 
