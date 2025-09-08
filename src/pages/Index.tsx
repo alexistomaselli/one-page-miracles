@@ -59,7 +59,7 @@ const Index = () => {
       <div ref={projectsRef}>
         <Projects 
           translations={t}
-          onDonate={() => setIsDonateDialogOpen(true)}
+          onDonate={handleDirectDonate}
         />
       </div>
       
