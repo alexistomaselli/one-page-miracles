@@ -19,11 +19,22 @@ export const Contact = ({ translations }: ContactProps) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
+    
+    // Construir el mailto URL con los datos del formulario
+    const subject = `Contacto desde la web: ${formData.name}`;
+    const body = `Nombre: ${formData.name}\n\nEmail: ${formData.email}\n\nMensaje: ${formData.message}`;
+    const mailtoUrl = `mailto:${translations.contact.info.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Abrir el cliente de correo del usuario
+    window.open(mailtoUrl, '_blank');
+    
+    // Mostrar notificación
     toast({
-      title: "Mensaje enviado",
-      description: "Gracias por contactarnos. Te responderemos pronto.",
+      title: "Preparando correo",
+      description: "Se abrirá tu cliente de correo para enviar el mensaje.",
     });
+    
+    // Limpiar el formulario
     setFormData({ name: "", email: "", message: "" });
   };
 
