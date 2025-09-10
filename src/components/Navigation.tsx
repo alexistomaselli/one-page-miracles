@@ -51,7 +51,7 @@ export const Navigation = ({ translations, currentLanguage, onLanguageChange, on
             {/* Intentar cargar el logo desde diferentes fuentes */}
             <img 
               src={logoUrl || (window as any).EmmanuelBridge?.getImage('logo') || "/lovable-uploads/6166bf8b-832a-4b45-8578-f751b80c840b.png"} 
-              alt="Manuel Global Atmissions Logo" 
+              alt="Emmanuel Global Atmissions Logo" 
               className="w-16 h-16 object-contain"
               onError={(e) => {
                 console.error('Error loading logo:', e);
@@ -65,7 +65,7 @@ export const Navigation = ({ translations, currentLanguage, onLanguageChange, on
             <span className={`text-xl font-bold transition-colors ${
               isScrolled ? 'text-primary' : 'text-white'
             }`}>
-              Manuel Global Atmissions
+              Emmanuel Global Latin Missions
             </span>
           </button>
 

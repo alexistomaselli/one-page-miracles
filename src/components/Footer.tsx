@@ -30,7 +30,7 @@ export const Footer = ({ translations, currentLanguage, onLanguageChange, onDona
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <Heart className="w-8 h-8 text-secondary mr-3" />
-              <h3 className="text-2xl font-bold">Manuel Global Atmissions</h3>
+              <h3 className="text-2xl font-bold">Emmanuel Global Latin Missions</h3>
             </div>
             <p className="text-white/80 mb-6 leading-relaxed">
               {translations.footer.tagline}
@@ -96,7 +96,7 @@ export const Footer = ({ translations, currentLanguage, onLanguageChange, onDona
         
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 mb-4 md:mb-0">
-            © 2025 Manuel Global Atmissions. {translations.footer.rights}
+            © 2025 Emmanuel Global Atmissions. {translations.footer.rights}
           </p>
           <LanguageToggle 
             currentLanguage={currentLanguage}
