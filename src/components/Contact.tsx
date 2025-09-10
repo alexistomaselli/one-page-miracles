@@ -48,25 +48,25 @@ export const Contact = ({ translations }: ContactProps) => {
   const contactInfo = [
     {
       icon: Mail,
-      label: "Email",
+      label: translations.contact.labels.email,
       value: translations.contact.info.email,
       href: `mailto:${translations.contact.info.email}`
     },
     {
       icon: Phone,
-      label: "Teléfono",
+      label: translations.contact.labels.phone,
       value: translations.contact.info.phone,
       href: `tel:${translations.contact.info.phone}`
     },
     {
       icon: MapPin,
-      label: "Dirección",
+      label: translations.contact.labels.address,
       value: translations.contact.info.address,
       href: null
     },
     {
       icon: MessageCircle,
-      label: "WhatsApp",
+      label: translations.contact.labels.whatsapp,
       value: translations.contact.info.whatsapp,
       href: `https://wa.me/${translations.contact.info.whatsapp.replace(/[^0-9]/g, '')}`
     }

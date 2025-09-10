@@ -80,6 +80,12 @@ export const translations = {
         phone: "+1 (555) 123-4567",
         address: "123 Calle de la Esperanza, Ciudad Global",
         whatsapp: "+1 (555) 987-6543"
+      },
+      labels: {
+        email: "Email",
+        phone: "Teléfono",
+        address: "Dirección",
+        whatsapp: "WhatsApp"
       }
     },
     
@@ -87,7 +93,8 @@ export const translations = {
     footer: {
       tagline: "Transformando vidas con fe, esperanza y amor",
       rights: "Todos los derechos reservados.",
-      social: "Síguenos"
+      social: "Síguenos",
+      quickLinks: "Enlaces Rápidos"
     }
   },
   
@@ -172,6 +179,12 @@ export const translations = {
         phone: "+1 (555) 123-4567",
         address: "123 Hope Street, Global City",
         whatsapp: "+1 (555) 987-6543"
+      },
+      labels: {
+        email: "Email",
+        phone: "Phone",
+        address: "Address",
+        whatsapp: "WhatsApp"
       }
     },
     
@@ -179,7 +192,8 @@ export const translations = {
     footer: {
       tagline: "Transforming lives with faith, hope, and love",
       rights: "All rights reserved.",
-      social: "Follow us"
+      social: "Follow us",
+      quickLinks: "Quick Links"
     }
   }
 };

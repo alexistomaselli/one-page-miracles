@@ -42,7 +42,7 @@ export const Footer = ({ translations, currentLanguage, onLanguageChange, onDona
           
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Enlaces Rápidos</h4>
+            <h4 className="text-lg font-semibold mb-4">{translations.footer.quickLinks}</h4>
             <ul className="space-y-2">
               <li>
                 <button 
