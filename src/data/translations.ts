@@ -17,7 +17,7 @@ export const translations = {
     
     // Hero section
     hero: {
-      title: "Brindando Alivio y Esperanza en América Latina en el Nombre de Jesús",
+      title: "Brindando Alivio y Esperanza en América Latina",
       subtitle: "Proporcionamos alivio esencial y recursos a comunidades necesitadas en países latinos. Juntos transformamos vidas y fomentamos un futuro más brillante siguiendo el mandato de nuestro Padre.",
       cta: "Ver Proyectos"
     },
@@ -34,8 +34,8 @@ export const translations = {
       title: "Nuestros Proyectos",
       school: {
         title: "Escuela en Argentina",
-        description: "Construir una escuela que brinde educación de calidad a niños en situación de vulnerabilidad, dándoles las herramientas para un futuro próspero.",
-        location: "Buenos Aires, Argentina 🇦🇷",
+        description: "Construir la primera institución educativa con orientación en valores cristianos.",
+        location: "General Villegas, Buenos Aires, Argentina 🇦🇷",
         cta: "Quiero Apoyar"
       },
       orphanage: {
