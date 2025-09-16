@@ -1,4 +1,5 @@
-import orphanageLove from '../assets/orphanage-love.jpg';
+//import orphanageLove from '../assets/orphanage-love.jpg';
+import orphanageLove from '../assets/orphanage-love-3.png';
 
 interface MissionProps {
   translations: any;

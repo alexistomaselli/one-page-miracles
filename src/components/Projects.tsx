@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Home, Utensils } from "lucide-react";
-import schoolImage from "@/assets/school-argentina.jpg";
-import orphanageImage from "@/assets/orphanage-love.jpg";
+//import schoolImage from "@/assets/school-argentina.jpg";
+import schoolImage from "@/assets/escuela-gral-villegas.png";
+import orphanageImage from "@/assets/orphanage-love-3.png";
 import soupKitchenImage from "@/assets/soup-kitchen-ecuador.jpg";
 
 interface ProjectsProps {
