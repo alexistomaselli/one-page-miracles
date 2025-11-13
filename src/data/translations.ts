@@ -51,6 +51,12 @@ export const translations = {
         cta: "Quiero Apoyar"
       }
     },
+
+    // Founders section
+    founders: {
+      title: "Fundadores",
+      subtitle: "Un equipo guiado por la fe que sirve con amor"
+    },
     
     // Testimonial section
     testimonial: {
@@ -149,6 +155,12 @@ export const translations = {
         location: "Ibarra, Ecuador 🇪🇨",
         cta: "Support This"
       }
+    },
+
+    // Founders section
+    founders: {
+      title: "Founders",
+      subtitle: "A faith-led team serving with love"
     },
     
     // Testimonial section

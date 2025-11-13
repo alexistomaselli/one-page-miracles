@@ -3,6 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Mission } from "@/components/Mission";
 import { Projects } from "@/components/Projects";
+import { Founders } from "@/components/Founders";
 import { Testimonial } from "@/components/Testimonial";
 import { CallToAction } from "@/components/CallToAction";
 import { Contact } from "@/components/Contact";
@@ -62,6 +63,8 @@ const Index = () => {
           onDonate={handleDirectDonate}
         />
       </div>
+
+      <Founders translations={t} />
       
       {/* Diálogo de donación con PayPal */}
       <Dialog open={isDonateDialogOpen} onOpenChange={setIsDonateDialogOpen}>

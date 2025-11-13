@@ -9,7 +9,6 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
     cors: true,
-    origin: "http://localhost:8080",
     hmr: {
       host: "localhost",
     },
