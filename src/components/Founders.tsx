@@ -9,13 +9,13 @@ interface FoundersProps {
 const foundersData = [
   {
     id: "carlos",
-    name: "Carlos Santamaria",
+    name: "Carlos A. Santamaria",
     role: "Fundador",
     image: carlosImage,
   },
   {
     id: "silvia",
-    name: "Silvia Santamaria",
+    name: "Silvia Preciado Santamaria",
     role: "Fundadora",
     image: silviaImage,
   },
@@ -27,7 +27,7 @@ const foundersData = [
   },
   {
     id: "florencia",
-    name: "Florencia Barrios",
+    name: "Florencia Tomaselli",
     role: "Fundadora",
     image: florenciaImage,
   },

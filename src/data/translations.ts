@@ -41,7 +41,7 @@ export const translations = {
       orphanage: {
         title: "Hogar de Niños",
         description: "Establecer un orfanato que sea verdaderamente un hogar, donde niños sin familia encuentren amor, cuidado y oportunidades para crecer.",
-        location: "Ubicación por definir 🏠",
+        location: "Milagro (Ecuador) 🏠",
         cta: "Quiero Apoyar"
       },
       dining: {
@@ -57,17 +57,15 @@ export const translations = {
       title: "Fundadores",
       subtitle: "Un equipo guiado por la fe que sirve con amor",
       phrases: {
-        miguel: `8  Nunca se apartará de tu boca este libro de la ley, sino que de día y de noche meditarás en él, para que guardes y hagas conforme a todo lo que en él está escrito; porque entonces harás prosperar tu camino, y todo te saldrá bien.
+        miguel: `Nunca se apartará de tu boca este libro de la ley, sino que de día y de noche meditarás en él, para que guardes y hagas conforme a todo lo que en él está escrito; porque entonces harás prosperar tu camino, y todo te saldrá bien.
 
-🍃 Josué 1:8 RV60 🍃
-
-Bendiciones para todos sabiendo que el amor de Dios estan grande que bendice al dador alegre y multiplica al ciento y al mil x uno Shalom`,
+Josué 1:8 RV60`,
         damian: "Tu semilla, regada con amor, se convierte en fruto de alegría y esperanza en la vida de un niño.",
         florencia: "Comunicar esperanza es mi forma de servir. Porque cuando la fe se comparte, el amor se multiplica.",
         carlos: `Juntos, podemos reescribir su historia—
         ¡dona hoy y enciende un mañana más brillante! 
         
-        📖🌈 #EmanuelGlobalLatinMissions`,
+        #EmanuelGlobalLatinMissions`,
         silvia: `Mi respirar, caminar y levantarme dependen únicamente de ayudar a otros a respirar, caminar y levantarse a ganar su propia carrera. Una vida con propósito. Unidos lo lograremos en el nombre poderoso de Jesús."
 
 “Dad, y se os dará; medida buena, apretada, remecida y rebosando darán en vuestro regazo; porque con la misma medida con que medís, os volverán a medir.” — Lucas 6:38 (RVR1960)`
