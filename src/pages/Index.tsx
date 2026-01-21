@@ -1,9 +1,9 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Mission } from "@/components/Mission";
 import { Projects } from "@/components/Projects";
-import { Founders } from "@/components/Founders";
 import { Testimonial } from "@/components/Testimonial";
 import { CallToAction } from "@/components/CallToAction";
 import { Contact } from "@/components/Contact";
@@ -15,11 +15,26 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 const Index = () => {
   const [currentLanguage, setCurrentLanguage] = useState("es");
   const [isDonateDialogOpen, setIsDonateDialogOpen] = useState(false);
-  
+  const location = useLocation();
+
   const t = translations[currentLanguage as keyof typeof translations];
 
   const projectsRef = useRef<HTMLDivElement>(null);
   const missionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (location.state && (location.state as any).scrollTo) {
+      const sectionId = (location.state as any).scrollTo;
+      const element = document.getElementById(sectionId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+      // Clear state after scrolling
+      window.history.replaceState({}, document.title);
+    }
+  }, [location]);
 
   const handleDonate = () => {
     // Navegar a la sección de proyectos
@@ -37,35 +52,34 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      <Navigation 
+      <Navigation
         translations={t}
         currentLanguage={currentLanguage}
         onLanguageChange={handleLanguageChange}
         onDonate={handleDirectDonate}
       />
-      
-      <Hero 
+
+      <Hero
         translations={t}
         onDonate={handleDonate}
         onDirectDonate={handleDirectDonate}
         onScrollDown={() => missionRef.current?.scrollIntoView({ behavior: 'smooth' })}
       />
-      
+
       <div ref={missionRef}>
-        <Mission 
+        <Mission
           translations={t}
         />
       </div>
-      
+
       <div ref={projectsRef}>
-        <Projects 
+        <Projects
           translations={t}
           onDonate={handleDirectDonate}
         />
       </div>
 
-      <Founders translations={t} />
-      
+
       {/* Diálogo de donación con PayPal */}
       <Dialog open={isDonateDialogOpen} onOpenChange={setIsDonateDialogOpen}>
         <DialogContent className="sm:max-w-md">
@@ -74,28 +88,28 @@ const Index = () => {
             <p className="text-center text-gray-600 mt-2">{t.donate.subtitle}</p>
           </DialogHeader>
           <div className="flex flex-col items-center justify-center py-6">
-            <PayPalDonateButton 
-              hostedButtonId="Y36EWLZRDUE42" 
-              containerId="paypal-container-Y36EWLZRDUE42" 
+            <PayPalDonateButton
+              hostedButtonId="Y36EWLZRDUE42"
+              containerId="paypal-container-Y36EWLZRDUE42"
             />
           </div>
         </DialogContent>
       </Dialog>
-      
-      <Testimonial 
+
+      <Testimonial
         translations={t}
       />
-      
-      <CallToAction 
+
+      <CallToAction
         translations={t}
         onDonate={handleDirectDonate}
       />
-      
-      <Contact 
+
+      <Contact
         translations={t}
       />
-      
-      <Footer 
+
+      <Footer
         translations={t}
         currentLanguage={currentLanguage}
         onLanguageChange={handleLanguageChange}
