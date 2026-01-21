@@ -16,37 +16,31 @@ const foundersData = [
   {
     id: "carlos",
     name: "Carlos A. Santamaria",
-    role: "Fundador",
     image: carlosImage,
   },
   {
     id: "silvia",
     name: "Silvia Preciado Santamaria",
-    role: "Fundadora",
     image: silviaImage,
   },
   {
     id: "damian",
     name: "Damián Tomaselli",
-    role: "Tesorero",
     image: damianImage,
   },
   {
     id: "florencia",
     name: "Florencia Tomaselli",
-    role: "Directora de Media",
     image: florenciaImage,
   },
   {
     id: "miguel",
     name: "Miguel Mutre",
-    role: "Fundador",
     image: miguelImage,
   },
   {
     id: "maria",
     name: "Maria Fernanda Plaza",
-    role: "Directora de Relaciones Publicas",
     image: mariaImage,
   },
 ];
@@ -160,7 +154,9 @@ export const Founders = ({ translations }: FoundersProps) => {
                     />
                   </div>
                   <h3 className="text-xl font-bold text-primary mb-1">{founder.name}</h3>
-                  <p className="text-secondary font-medium text-sm mb-4">{founder.role}</p>
+                  <p className="text-secondary font-medium text-sm mb-4">
+                    {translations?.founders?.roles?.[founder.id] ?? ""}
+                  </p>
                   <div className="h-[1px] w-12 bg-primary/20 mx-auto mb-4" />
                   <p className="text-foreground/80 italic leading-relaxed text-sm">
                     “{translations?.founders?.phrases?.[founder.id] ?? ""}”
@@ -225,7 +221,9 @@ export const Founders = ({ translations }: FoundersProps) => {
                 />
               </div>
               <h3 className="text-xl font-bold text-primary mb-1">{founder.name}</h3>
-              <p className="text-secondary font-medium text-sm mb-4">{founder.role}</p>
+              <p className="text-secondary font-medium text-sm mb-4">
+                {translations?.founders?.roles?.[founder.id] ?? ""}
+              </p>
               <div className="h-[1px] w-12 bg-primary/20 mx-auto mb-4" />
               <p className="text-foreground/80 italic leading-relaxed text-sm">
                 “{translations?.founders?.phrases?.[founder.id] ?? ""}”

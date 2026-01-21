@@ -57,6 +57,14 @@ export const translations = {
     founders: {
       title: "Fundadores",
       subtitle: "Un equipo guiado por la fe que sirve con amor",
+      roles: {
+        carlos: "Fundador",
+        silvia: "Fundadora",
+        damian: "Tesorero",
+        florencia: "Directora de Media",
+        miguel: "Fundador",
+        maria: "Directora de Relaciones Publicas"
+      },
       phrases: {
         miguel: `Nunca se apartará de tu boca este libro de la ley, sino que de día y de noche meditarás en él, para que guardes y hagas conforme a todo lo que en él está escrito; porque entonces harás prosperar tu camino, y todo te saldrá bien.
 
@@ -178,6 +186,14 @@ Josué 1:8 RV60`,
     founders: {
       title: "Founders",
       subtitle: "A faith-led team serving with love",
+      roles: {
+        carlos: "Founder",
+        silvia: "Founder",
+        damian: "Treasurer",
+        florencia: "Media Director",
+        miguel: "Founder",
+        maria: "Public Relations Director"
+      },
       phrases: {
         miguel: `This Book of the Law shall not depart from your mouth; you shall meditate on it day and night, so that you may observe to do according to all that is written in it. Then you will make your way prosperous, and you will have good success.
 
