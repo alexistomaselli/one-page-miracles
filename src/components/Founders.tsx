@@ -125,7 +125,7 @@ export const Founders = ({ translations }: FoundersProps) => {
         </div>
 
         {/* Carrusel Desktop */}
-        <div className="relative hidden lg:block overflow-hidden">
+        <div className="relative hidden lg:block">
           <div
             ref={viewportRef}
             className="max-w-7xl mx-auto overflow-hidden scroll-smooth"
