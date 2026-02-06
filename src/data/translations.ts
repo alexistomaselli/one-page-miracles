@@ -58,11 +58,11 @@ export const translations = {
       title: "Fundadores",
       subtitle: "Un equipo guiado por la fe que sirve con amor",
       roles: {
-        carlos: "Fundador",
-        silvia: "Fundadora",
+        carlos: "Vicepresidente",
+        silvia: "Presidente",
         damian: "Tesorero",
         florencia: "Directora de Media",
-        miguel: "Fundador",
+        miguel: "Secretario",
         maria: "Directora de Relaciones Publicas"
       },
       phrases: {
@@ -187,11 +187,11 @@ Josué 1:8 RV60`,
       title: "Founders",
       subtitle: "A faith-led team serving with love",
       roles: {
-        carlos: "Founder",
-        silvia: "Founder",
+        carlos: "Vice President",
+        silvia: "President",
         damian: "Treasurer",
         florencia: "Media Director",
-        miguel: "Founder",
+        miguel: "Secretary",
         maria: "Public Relations Director"
       },
       phrases: {
