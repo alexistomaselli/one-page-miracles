@@ -20,7 +20,7 @@ export const LanguageToggle = ({ currentLanguage, onLanguageChange }: LanguageTo
 
   return (
     <div className="flex items-center gap-2">
-      <Globe className="w-4 h-4 text-muted-foreground" />
+      <Globe className="w-4 h-4" />
       {languages.map((lang) => (
         <Button
           key={lang.code}

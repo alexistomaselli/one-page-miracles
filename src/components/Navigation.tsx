@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { Menu, X } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 interface NavigationProps {
   translations: any;
@@ -24,21 +25,42 @@ export const Navigation = ({ translations, currentLanguage, onLanguageChange, on
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollTo: sectionId } });
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
     setIsMobileMenuOpen(false);
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      navigate('/');
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
     setIsMobileMenuOpen(false);
   };
 
+  const handleQuienesSomos = () => {
+    navigate('/quienes-somos');
+    setIsMobileMenuOpen(false);
+  };
+
+  const isHomePage = location.pathname === "/";
+  const showScrolledStyles = !isHomePage || isScrolled;
+
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-white/95 backdrop-blur-md shadow-lg'
-        : 'bg-white/10 backdrop-blur-sm'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${showScrolledStyles
+      ? 'bg-white/95 backdrop-blur-md shadow-lg'
+      : 'bg-white/10 backdrop-blur-sm'
       }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
@@ -61,7 +83,7 @@ export const Navigation = ({ translations, currentLanguage, onLanguageChange, on
                 }
               }}
             />
-            <span className={`text-xl font-bold transition-colors ${isScrolled ? 'text-primary' : 'text-white'
+            <span className={`text-xl font-bold transition-colors ${showScrolledStyles ? 'text-primary' : 'text-white'
               }`}>
               Emmanuel Global Latin Missions
             </span>
@@ -71,30 +93,39 @@ export const Navigation = ({ translations, currentLanguage, onLanguageChange, on
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('mission')}
-              className={`transition-colors hover:opacity-80 ${isScrolled ? 'text-foreground' : 'text-white'
+              className={`transition-colors hover:opacity-80 ${showScrolledStyles ? 'text-foreground' : 'text-white'
                 }`}
             >
               {translations.nav.mission}
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className={`transition-colors hover:opacity-80 ${isScrolled ? 'text-foreground' : 'text-white'
+              className={`transition-colors hover:opacity-80 ${showScrolledStyles ? 'text-foreground' : 'text-white'
                 }`}
             >
               {translations.nav.projects}
             </button>
             <button
+              onClick={handleQuienesSomos}
+              className={`transition-colors hover:opacity-80 ${showScrolledStyles ? 'text-foreground' : 'text-white'
+                }`}
+            >
+              {translations.nav.aboutUs}
+            </button>
+            <button
               onClick={() => scrollToSection('contact')}
-              className={`transition-colors hover:opacity-80 ${isScrolled ? 'text-foreground' : 'text-white'
+              className={`transition-colors hover:opacity-80 ${showScrolledStyles ? 'text-foreground' : 'text-white'
                 }`}
             >
               {translations.nav.contact}
             </button>
 
-            <LanguageToggle
-              currentLanguage={currentLanguage}
-              onLanguageChange={onLanguageChange}
-            />
+            <div className={showScrolledStyles ? 'text-foreground' : 'text-white'}>
+              <LanguageToggle
+                currentLanguage={currentLanguage}
+                onLanguageChange={onLanguageChange}
+              />
+            </div>
 
             <Button variant="donate" onClick={onDonate} size="sm">
               {translations.nav.donate}
@@ -104,7 +135,7 @@ export const Navigation = ({ translations, currentLanguage, onLanguageChange, on
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 transition-colors ${isScrolled ? 'text-foreground' : 'text-white'
+            className={`md:hidden p-2 transition-colors ${showScrolledStyles ? 'text-foreground' : 'text-white'
               }`}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -128,16 +159,24 @@ export const Navigation = ({ translations, currentLanguage, onLanguageChange, on
                 {translations.nav.projects}
               </button>
               <button
+                onClick={handleQuienesSomos}
+                className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted/50 transition-colors"
+              >
+                {translations.nav.aboutUs}
+              </button>
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted/50 transition-colors"
               >
                 {translations.nav.contact}
               </button>
               <div className="px-4 py-2">
-                <LanguageToggle
-                  currentLanguage={currentLanguage}
-                  onLanguageChange={onLanguageChange}
-                />
+                <div className="text-foreground">
+                  <LanguageToggle
+                    currentLanguage={currentLanguage}
+                    onLanguageChange={onLanguageChange}
+                  />
+                </div>
               </div>
               <div className="px-4 py-2">
                 <Button variant="donate" onClick={onDonate} className="w-full">

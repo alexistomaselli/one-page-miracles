@@ -127,3 +127,32 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* --- Founders marquee animation --- */
+@keyframes founders-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.founders-marquee-track {
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .founders-marquee-track {
+    animation: none !important;
+  }
+}
+
+/* Oculta barras de scroll manteniendo el desplazamiento programático */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;            /* Chrome, Safari */
+}
