@@ -195,17 +195,18 @@ Josué 1:8 RV60`,
         maria: "Public Relations Director"
       },
       phrases: {
-        miguel: `This Book of the Law shall not depart from your mouth; you shall meditate on it day and night, so that you may observe to do according to all that is written in it. Then you will make your way prosperous, and you will have good success.
+        miguel: `This Book of the Law shall not depart from your mouth; but you shall meditate on it day and night, so that you may observe to do according to all that is written in it. For then you will make your way prosperous, and you will have good success.
 
-🍃 Joshua 1:8 🍃
-
-Blessings to everyone, knowing that God's love is so great that He blesses the cheerful giver and multiplies one hundredfold and a thousandfold. Shalom`,
+Joshua 1:8`,
         damian: "Your seed, watered with love, becomes fruit of joy and hope in a child's life.",
-        florencia: "Communicating hope is my way of serving. When faith is shared, love multiplies.",
-        carlos: `Together, we can rewrite their story—donate today and light a brighter tomorrow! 📖🌈 #EmanuelGlobalLatinMissions`,
-        silvia: `My breathing, walking, and rising depend entirely on helping others breathe, walk, and rise to run their own race. A life with purpose. United we will achieve it in the powerful name of Jesus.
+        florencia: "Communicating hope is my way of serving. Because when faith is shared, love multiplies.",
+        carlos: `Together, we can rewrite their story—
+        donate today and light a brighter tomorrow! 
+        
+        #EmanuelGlobalLatinMissions`,
+        silvia: `My breathing, walking, and rising depend solely on helping others breathe, walk, and rise to win their own race. A life with purpose. United we will achieve it in the powerful name of Jesus."
 
-“Give, and it will be given to you: good measure, pressed down, shaken together, and running over will be put into your lap. For with the same measure that you use, it will be measured back to you.” — Luke 6:38`,
+“Give, and it will be given to you; good measure, pressed down, shaken together, and running over will be put into your lap; for with the same measure that you use, it will be measured back to you.” — Luke 6:38`,
         maria: "Just as the Son of Man did not come to be served, but to serve, and to give his life as a ransom for many."
       }
     },
